@@ -19,13 +19,13 @@ def quadrature(a,b,n):
     if n==1:
         I=f(0)*2
     elif n==2:
-        I=(f(-np.sqrt(3)/3)*(b-a)/2+(b+a)/2)+f((np.sqrt(3)/3)*(b-a)/2+(b+a)/2)
+        I=(f((-np.sqrt(3)/3)*(b-a)/2+(b+a)/2))+f((np.sqrt(3)/3)*(b-a)/2+(b+a)/2)
     elif n==3:
-        I=(5/9)*(f(-np.sqrt(15)/5)*(b-a)/2+(b+a)/2)+(5/9)*f((0)*(b-a)/2+(b+a)/2)+(5/9)*f((np.sqrt(15)/5)*(b-a)/2+(b+a)/2)
+        I=(5/9)*f((-np.sqrt(15)/5)*(b-a)/2+(b+a)/2)+(8/9)*f(0*(b-a)/2+(b+a)/2)+(5/9)*f((np.sqrt(15)/5)*(b-a)/2+(b+a)/2)
     else:
         print("pas 1 ou 2 ou 3")
-    return I # Integral value
+    return I*(b-a)/2 # Integral value
 
-quad=quadrature(-1,1,3)
+quad=quadrature(1,2,3)
 print(quad)
 
